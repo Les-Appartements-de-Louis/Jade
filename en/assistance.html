@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Support | Les Appartements de Louis</title>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../langues.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+.search-box{
+margin:18px 0;
+padding:14px;
+background:var(--glass);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:var(--radius);
+}
+
+.search-box input{
+width:100%;
+padding:14px 16px;
+border:none;
+outline:none;
+border-radius:14px;
+background:rgba(255,255,255,.08);
+color:#fff;
+font-size:15px;
+font-family:inherit;
+}
+
+.search-box input::placeholder{
+color:rgba(255,255,255,.60);
+}
+
+.category{
+margin-top:14px;
+background:var(--glass);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:16px;
+overflow:hidden;
+transition:.25s;
+}
+
+.category-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:16px;
+cursor:pointer;
+user-select:none;
+}
+
+.category-header h3{
+display:flex;
+align-items:center;
+gap:10px;
+font:600 22px "Cormorant Garamond",serif;
+}
+
+.category-header h3 i{
+color:var(--gold);
+}
+
+.arrow{
+transition:.30s;
+}
+
+.category.open .arrow{
+transform:rotate(180deg);
+}
+
+.category-content{
+display:none;
+padding:0 14px 14px;
+}
+
+.category.open .category-content{
+display:block;
+animation:fade .25s ease;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(-8px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.faq{
+margin-top:10px;
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+border-radius:14px;
+overflow:hidden;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px;
+cursor:pointer;
+font-size:15px;
+font-weight:600;
+}
+
+.faq-question i{
+transition:.30s;
+}
+
+.faq.open .faq-question i{
+transform:rotate(180deg);
+}
+
+.faq-answer{
+display:none;
+padding:0 15px 15px;
+font-size:14px;
+line-height:1.65;
+opacity:.92;
+}
+
+.faq.open .faq-answer{
+display:block;
+}
+
+.faq-answer strong{
+color:var(--gold);
+font-weight:700;
+}
+
+mark{
+background:rgba(221,178,107,.35);
+color:#fff;
+padding:2px 4px;
+border-radius:4px;
+}
+
+</style>
+
+</head>
+
+<body class="inner-page">
+
+<div class="overlay"></div>
+
+<main>
+
+<div class="hero">
+<div class="language-selector">
+    🌐
+    <a href="../assistance.html">FR</a> |
+    <a href="assistance.html" class="active">EN</a><br>
+    <a href="../it/assistance.html">IT</a> |
+    <a href="../es/assistance.html">ES</a>
+</div>
+
+<div class="logo">
+    <h1><span class="white">L</span><span class="gold">A</span></h1>
+    <p>LES APPARTEMENTS<br>DE LOUIS</p>
+</div>
+
+<section class="welcome">
+
+<h2>Support</h2>
+
+<div class="line"></div>
+
+<p>
+
+Quickly find the answer to your question.
+
+</p>
+
+</section>
+
+<div class="search-box">
+
+<input
+id="search"
+type="text"
+placeholder="Search: Wi-Fi, arrival, television..."
+autocomplete="off">
+
+</div>
+
+<!-- ==========================================================
+     ARRIVAL
+========================================================== -->
+
+<div class="category">
+
+<div class="category-header">
+
+<h3>
+
+<i class="fa-solid fa-key"></i>
+
+Arrival
+
+</h3>
+
+<i class="fa-solid fa-chevron-down arrow"></i>
+
+</div>
+
+<div class="category-content">
+
+
+    
+    <div class="faq" data-search="key box lockbox code arrival">
+    
+    <div class="faq-question">
+        
+        What is the lockbox code?
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        For security reasons, the code is provided only through your booking platform.
+        
+    </div>
+    
+</div>
+
+<div class="faq" data-search="open lockbox key">
+    
+    <div class="faq-question">
+        
+        I can't open the lockbox.
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        Make sure all the numbers are perfectly aligned.
+        
+        <br><br>
+        
+        Then pull the black latch towards you and downward.
+        
+    </div>
+    
+</div>
+
+<div class="faq" data-search="early arrival early check in">
+    
+    <div class="faq-question">
+        
+        I arrived early.
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        Send me a message on WhatsApp.
+        
+        If the apartment is ready, I'll be happy to give you access.
+        
+    </div>
+    
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================================
+     WI-FI
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-wifi"></i>
+            
+            Wi-Fi
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+        <div class="faq" data-search="wifi wi-fi internet password freebox">
+            
+            <div class="faq-question">
+                
+                What is the Wi-Fi network name and password?
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                <strong>📶 Network:</strong> Freebox-6037CC
+                
+                <br><br>
+                
+                <strong>🔑 Password:</strong> lappartementdeLouis2024
+                
+            </div>
+            
+        </div>
+        
+        <div class="faq" data-search="internet connection box outage">
+            
+            <div class="faq-question">
+                
+                I have no Internet connection.
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Unplug the Internet box for about 30 seconds.
+                
+                <br><br>
+                
+                Plug it back in and wait about 3 minutes before trying again.
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- ==========================================================
+     TELEVISION
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-tv"></i>
+            
+            Television
+            
+
+</h3>
+
+<i class="fa-solid fa-chevron-down arrow"></i>
+
+</div>
+
+<div class="category-content">
+    
+    <div class="faq" data-search="television tv turn on decoder">
+        
+        <div class="faq-question">
+            
+            How do I turn on the television?
+            
+            <i class="fa-solid fa-chevron-down"></i>
+            
+        </div>
+        
+        <div class="faq-answer">
+            
+            First, turn on the television using the black remote control.
+            
+            <br><br>
+            
+            Then turn on the TV decoder using the grey remote control.
+            
+        </div>
+        
+    </div>
+    
+    <div class="faq" data-search="tv remote batteries">
+        
+        <div class="faq-question">
+            
+            The remote control is not working.
+            
+            <i class="fa-solid fa-chevron-down"></i>
+            
+        </div>
+        
+        <div class="faq-answer">
+            
+            Check the batteries and try again.
+            
+            If necessary, use the buttons located directly underneath the television.
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+</div>
+
+<!-- ==========================================================
+     AIR CONDITIONING
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-snowflake"></i>
+            
+            Air Conditioning
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+        <div class="faq" data-search="air conditioning heating cool fan">
+            
+            <div class="faq-question">
+                
+                How do I use the air conditioning?
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Use the white remote control.
+                
+                <br><br>
+                
+                <strong>❄️ COOL</strong> = Air conditioning
+                
+                <br>
+                
+                <strong>☀️ HEAT</strong> = Heating
+                
+                <br>
+                
+                <strong>💨 FAN</strong> = Fan mode
+                
+            </div>
+            
+        </div>
+        
+        <div class="faq" data-search="air conditioning not working problem">
+            
+            <div class="faq-question">
+                
+                The air conditioning is not working.
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                After switching it on, wait approximately 3 minutes.
+                
+                <br><br>
+                
+                Make sure the selected mode is set to <strong>COOL</strong> or <strong>HEAT</strong>.
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- ==========================================================
+     KITCHEN
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-utensils"></i>
+            
+            Kitchen
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+    
+    <div class="faq" data-search="induction hob unlock">
+        
+        <div class="faq-question">
+            
+            How do I unlock the cooktop?
+            
+            <i class="fa-solid fa-chevron-down"></i>
+            
+        </div>
+        
+        <div class="faq-answer">
+            
+            Press and hold the <strong>Clock</strong> button for about 4 seconds.
+            
+        </div>
+        
+    </div>
+    
+    <div class="faq" data-search="bin rubbish waste garbage">
+        
+        <div class="faq-question">
+            
+            Where should I throw my rubbish?
+            
+            <i class="fa-solid fa-chevron-down"></i>
+            
+        </div>
+        
+        <div class="faq-answer">
+            
+            The waste collection room is located on the right as you leave the residence.
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+</div>
+
+<!-- ==========================================================
+     PARKING
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-square-parking"></i>
+            
+            Parking
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+        <div class="faq" data-search="parking car visitor space">
+            
+            <div class="faq-question">
+                
+                Where can I park?
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Visitor parking spaces are available within the residence.
+                
+                <br><br>
+                
+                During the summer season, they may all be occupied.
+                
+                <br><br>
+                
+                A large car park is located directly opposite the residence, with both free and paid parking spaces.
+                
+            </div>
+            
+        </div>
+        
+        <div class="faq" data-search="visitor parking residence">
+            
+            <div class="faq-question">
+                
+                Can I park inside the residence?
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Yes, but only in the visitor parking spaces when they are available.
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- ==========================================================
+     DEPARTURE
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-right-from-bracket"></i>
+            
+            Departure
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+        <div class="faq" data-search="departure checkout time">
+            
+            <div class="faq-question">
+                
+                What time do I need to check out?
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Please leave the apartment before <strong>10:00 AM</strong>.
+                
+            </div>
+            
+        </div>
+        
+        <div class="faq" data-search="keys lockbox departure">
+    
+    <div class="faq-question">
+        
+        Where should I leave the keys?
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        Please put the keys back into the lockbox.
+        
+        <br><br>
+        
+        Remember to scramble the code before you leave.
+        
+    </div>
+    
+</div>
+
+<div class="faq" data-search="cleaning dishes checkout departure">
+    
+    <div class="faq-question">
+        
+        What should I do before leaving?
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        • Close all windows.
+        
+        <br>
+        
+        • Turn off the air conditioning.
+        
+        <br>
+        
+        • Wash and put away the dishes.
+        
+        <br>
+        
+        • Empty the rubbish bins.
+        
+        <br>
+        
+        • Leave the apartment clean.
+        
+        <br>
+        
+        • Return the keys to the lockbox.
+        
+        <br>
+        
+        • Make sure you haven't forgotten anything.
+        
+    </div>
+    
+</div>
+
+<div class="faq" data-search="extend stay extra night late checkout">
+    
+    <div class="faq-question">
+        
+        Can I extend my stay?
+        
+        <i class="fa-solid fa-chevron-down"></i>
+        
+    </div>
+    
+    <div class="faq-answer">
+        
+        Please contact me on WhatsApp.
+        
+        <br><br>
+        
+        I'll check whether the apartment is available.
+        
+    </div>
+    
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================================
+     ELECTRICITY
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-bolt"></i>
+            
+            Electricity
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+        <div class="faq" data-search="electricity power breaker">
+            
+            <div class="faq-question">
+                
+                I don't have any electricity.
+                
+                <i class="fa-solid fa-chevron-down"></i>
+                
+            </div>
+            
+            <div class="faq-answer">
+                
+                Check that the main circuit breaker is in the ON position.
+                
+                <br><br>
+                
+                If the whole residence is affected, it is probably a general power outage.
+                
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+<!-- ==========================================================
+     HOT WATER
+========================================================== -->
+
+<div class="category">
+    
+    <div class="category-header">
+        
+        <h3>
+            
+            <i class="fa-solid fa-droplet"></i>
+            
+            Hot Water
+            
+        </h3>
+        
+        <i class="fa-solid fa-chevron-down arrow"></i>
+        
+    </div>
+    
+    <div class="category-content">
+        
+
+
+<div class="faq" data-search="hot water water heater tank">
+
+<div class="faq-question">
+
+I don't have any hot water.
+
+<i class="fa-solid fa-chevron-down"></i>
+
+</div>
+
+<div class="faq-answer">
+
+If several showers have just been taken, please allow the water heater time to reheat.
+
+<br><br>
+
+If the problem persists after several hours, contact me on WhatsApp.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================================
+     EMERGENCY
+========================================================== -->
+
+<div class="category">
+
+<div class="category-header">
+
+<h3>
+
+<i class="fa-solid fa-triangle-exclamation"></i>
+
+Emergency Numbers
+
+</h3>
+
+<i class="fa-solid fa-chevron-down arrow"></i>
+
+</div>
+
+<div class="category-content">
+
+<div class="faq">
+
+<div class="faq-question">
+
+Emergency Numbers
+
+<i class="fa-solid fa-chevron-down"></i>
+
+</div>
+
+<div class="faq-answer">
+
+🚑 <strong>SAMU (Medical Emergency):</strong> 15
+
+<br><br>
+
+🚒 <strong>Fire Brigade:</strong> 18
+
+<br><br>
+
+👮 <strong>Police:</strong> 17
+
+<br><br>
+
+🌍 <strong>European Emergency Number:</strong> 112
+
+<br><br>
+
+💊 <strong>Emergency Pharmacy:</strong> 3237
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ==========================================================
+     NEED HELP?
+========================================================== -->
+
+<div class="info-card">
+
+<h3>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Didn't find the answer to your question?
+
+</h3>
+
+<p>
+
+I'm available throughout your stay.
+
+Please don't hesitate to contact me if you need any assistance.
+
+</p>
+
+<a
+class="button"
+href="https://wa.me/33777985393?text=Hello%20Louis%2C%20I%20need%20your%20help%20regarding%20Les%20Appartements%20de%20Louis."
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+Contact Louis on WhatsApp
+
+</a>
+
+</div>
+
+<!-- ==========================================================
+     NAVIGATION
+========================================================== -->
+
+<div class="mini-navigation">
+
+<a class="mini-nav" href="index.html">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+<a class="mini-nav" href="arrivee.html">
+<i class="fa-solid fa-key"></i>
+<span>Arrival</span>
+</a>
+
+<a class="mini-nav" href="wifi.html">
+<i class="fa-solid fa-wifi"></i>
+<span>Wi-Fi</span>
+</a>
+
+<a class="mini-nav" href="infos.html">
+<i class="fa-solid fa-house-chimney"></i>
+<span>Practical Info</span>
+</a>
+
+<a class="mini-nav" href="proximite.html">
+<i class="fa-solid fa-location-dot"></i>
+<span>Nearby</span>
+</a>
+
+<a class="mini-nav" href="depart.html">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>Departure</span>
+</a>
+
+</div>
+
+</div>
+
+</main>
+
+<script>
+
+/* ==========================================================
+   CATEGORIES
+========================================================== */
+
+document.querySelectorAll(".category-header").forEach(header=>{
+
+header.addEventListener("click",()=>{
+
+const category=header.parentElement;
+
+const opened=category.classList.contains("open");
+
+document.querySelectorAll(".category").forEach(c=>{
+
+c.classList.remove("open");
+
+});
+
+if(!opened){
+
+category.classList.add("open");
+
+}
+
+});
+
+});
+
+/* ==========================================================
+   QUESTIONS
+========================================================== */
+
+document.querySelectorAll(".faq-question").forEach(question=>{
+
+question.addEventListener("click",()=>{
+
+const faq=question.parentElement;
+
+const opened=faq.classList.contains("open");
+
+faq.parentElement.querySelectorAll(".faq").forEach(item=>{
+
+item.classList.remove("open");
+
+});
+
+if(!opened){
+
+faq.classList.add("open");
+
+}
+
+});
+
+});
+
+/* ==========================================================
+   SEARCH
+========================================================== */
+
+function normalize(text){
+
+return text
+.toLowerCase()
+.normalize("NFD")
+.replace(/[\u0300-\u036f]/g,"")
+.replace(/[^\w\s]/g," ")
+.replace(/\s+/g," ")
+.trim();
+
+}
+
+const search=document.getElementById("search");
+
+search.addEventListener("input",function(){
+
+const value=normalize(this.value);
+
+let firstMatch=null;
+
+document.querySelectorAll(".faq").forEach(faq=>{
+
+const text=normalize(
+faq.innerText+" "+(faq.dataset.search||"")
+);
+
+const visible=value===""||text.includes(value);
+
+faq.style.display=visible?"block":"none";
+
+faq.classList.remove("open");
+
+if(!firstMatch && visible && value!==""){
+
+firstMatch=faq;
+
+}
+
+});
+
+document.querySelectorAll(".category").forEach(category=>{
+
+category.classList.remove("open");
+
+const visible=[...category.querySelectorAll(".faq")]
+.some(faq=>faq.style.display!=="none");
+
+category.style.display=(value===""||visible)
+?"block"
+:"none";
+
+});
+
+if(firstMatch){
+
+const category=firstMatch.closest(".category");
+
+category.classList.add("open");
+
+firstMatch.classList.add("open");
+
+}
+
+});
+</script>
+
+<script src="../langues.js"></script>
+
+</body>
+
+</html>
+

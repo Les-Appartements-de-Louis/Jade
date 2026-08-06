@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nei dintorni | Les Appartements de Louis</title>
+
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../langues.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<style>
+
+.map-section{
+margin-top:20px;
+background:var(--glass);
+backdrop-filter:blur(18px);
+-webkit-backdrop-filter:blur(18px);
+border:1px solid rgba(255,255,255,.15);
+border-radius:18px;
+overflow:hidden;
+}
+
+.map-header{
+padding:18px;
+text-align:center;
+}
+
+.map-header h3{
+font:600 28px "Cormorant Garamond",serif;
+color:var(--gold);
+margin-bottom:6px;
+}
+
+.map-header p{
+font-size:14px;
+opacity:.9;
+line-height:1.45;
+}
+
+.map{
+height:230px;
+width:100%;
+}
+
+.location-list{
+padding:12px 16px;
+}
+
+.location{
+
+display:flex;
+align-items:flex-start;
+gap:12px;
+
+padding:11px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+cursor:pointer;
+
+transition:.20s;
+
+}
+
+.location:last-child{
+
+border:none;
+
+}
+
+.location:hover{
+
+transform:translateX(4px);
+
+}
+
+.badge{
+
+width:28px;
+height:28px;
+
+border-radius:50%;
+
+background:linear-gradient(#efc980,#ddb26b);
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+font-size:14px;
+font-weight:700;
+
+color:#222;
+
+flex-shrink:0;
+
+}
+
+.location strong{
+
+display:block;
+
+font-size:15px;
+
+}
+
+.location span{
+
+font-size:13px;
+
+opacity:.82;
+
+}
+
+.home-marker {
+
+width:50px;
+height:50px;
+
+border-radius:50%;
+
+background:linear-gradient(#efc980,#ddb26b);
+
+border:3px solid white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+
+box-shadow:0 5px 14px rgba(0,0,0,.40);
+
+}
+
+.number-marker{
+
+width:30px;
+height:30px;
+
+border-radius:50%;
+
+background:#ddb26b;
+
+border:2px solid white;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:700;
+
+color:#222;
+
+box-shadow:0 2px 10px rgba(0,0,0,.35);
+
+}
+
+.leaflet-popup-content{
+
+text-align:center;
+
+font-family:Inter,sans-serif;
+
+}
+
+</style>
+
+</head>
+
+<body class="inner-page">
+
+<div class="overlay"></div>
+
+<main>
+
+<div class="hero">
+
+<div class="language-selector">
+🌐
+<a href="../proximite.html">FR</a> |
+<a href="../en/proximite.html">EN</a><br>
+<a href="proximite.html" class="active">IT</a> |
+<a href="../es/proximite.html">ES</a>
+</div>
+
+<div class="logo">
+<h1><span class="white">L</span><span class="gold">A</span></h1>
+<p>LES APPARTEMENTS<br>DE LOUIS</p>
+</div>
+
+<section class="welcome">
+
+<h2>Nei dintorni</h2>
+
+<div class="line"></div>
+
+<p>
+
+Trova facilmente tutti i servizi e i luoghi utili nei dintorni dell'appartamento.
+
+</p>
+
+</section>
+
+<section class="map-section">
+
+<div class="map-header">
+
+<h3>🚶 A piedi</h3>
+
+<p>
+
+Tutti i servizi raggiungibili comodamente a piedi.
+
+</p>
+
+</div>
+
+<div id="map1" class="map"></div>
+
+<div class="location-list" id="listePied">
+
+<div class="location" onclick="focusMarker(1,0)">
+<div class="badge">🏠</div>
+<div>
+<strong>Les Appartements de Louis</strong>
+<span>55 Route de la Corniche</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,1)">
+<div class="badge">1</div>
+<div>
+<strong>Porto Santa Lucia</strong>
+<span>2 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,2)">
+<div class="badge">2</div>
+<div>
+<strong>Ristoranti</strong>
+<span>4 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,3)">
+<div class="badge">3</div>
+<div>
+<strong>Bar e caffè</strong>
+<span>4 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,4)">
+<div class="badge">4</div>
+<div>
+<strong>Minimarket</strong>
+<span>7 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,5)">
+<div class="badge">5</div>
+<div>
+<strong>Panetteria</strong>
+<span>6 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,6)">
+<div class="badge">6</div>
+<div>
+<strong>Spiaggia</strong>
+<span>8 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,7)">
+<div class="badge">7</div>
+<div>
+<strong>Farmacia</strong>
+<span>11 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,8)">
+<div class="badge">8</div>
+<div>
+<strong>Navette marittime per Saint-Tropez</strong>
+<span>26 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,9)">
+<div class="badge">9</div>
+<div>
+<strong>Stazione di Boulouris</strong>
+<span>35 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,10)">
+<div class="badge">10</div>
+<div>
+<strong>Stazione di Saint-Raphaël Valescure</strong>
+<span>26 min a piedi</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(1,11)">
+<div class="badge">11</div>
+<div>
+<strong>Casinò Barrière</strong>
+<span>24 min a piedi</span>
+</div>
+</div>
+
+</div>
+
+<a class="button"
+target="_blank"
+href="https://maps.google.com/?q=55+Route+de+la+Corniche+83700+Saint-Raphaël">
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+Apri in Google Maps
+
+</a>
+
+</section>
+
+<section class="map-section">
+
+<div class="map-header">
+
+<h3>🚗 Saint-Raphaël</h3>
+
+<p>
+
+Le principali attrazioni raggiungibili in auto.
+
+</p>
+
+</div>
+
+<div id="map2" class="map"></div>
+
+<div class="location-list" id="listeVille">
+
+<div class="location" onclick="focusMarker(2,0)">
+<div class="badge">🏠</div>
+<div>
+<strong>Les Appartements de Louis</strong>
+<span>Punto di partenza</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(2,4)">
+<div class="badge">1</div>
+<div>
+<strong>Base Nature François Léotard</strong>
+<span>17 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(2,5)">
+<div class="badge">2</div>
+<div>
+<strong>Luna Park</strong>
+<span>18 min (estate)</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(2,6)">
+<div class="badge">3</div>
+<div>
+<strong>Aqualand</strong>
+<span>18 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(2,7)">
+<div class="badge">4</div>
+<div>
+<strong>Massiccio dell'Estérel</strong>
+<span>40 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(2,8)">
+<div class="badge">5</div>
+<div>
+<strong>Ipermercato e stazione di servizio</strong>
+<span>9 min</span>
+</div>
+</div>
+
+</div>
+
+<a class="button"
+target="_blank"
+href="https://maps.google.com/?q=Saint-Raphaël">
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+Apri in Google Maps
+
+</a>
+
+</section>
+
+<section class="map-section">
+
+<div class="map-header">
+
+<h3>🌴 Scopri la regione</h3>
+
+<p>
+
+Alcune delle destinazioni imperdibili nei dintorni di Saint-Raphaël.
+
+</p>
+
+</div>
+
+<div id="map3" class="map"></div>
+
+<div class="location-list">
+
+<div class="location" onclick="focusMarker(3,0)">
+<div class="badge">🏠</div>
+<div>
+<strong>Les Appartements de Louis</strong>
+<span>Punto di partenza</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,1)">
+<div class="badge">1</div>
+<div>
+<strong>Sainte-Maxime</strong>
+<span>50 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,2)">
+<div class="badge">2</div>
+<div>
+<strong>Saint-Tropez</strong>
+<span>55 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,3)">
+<div class="badge">3</div>
+<div>
+<strong>Cannes</strong>
+<span>60 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,4)">
+<div class="badge">4</div>
+<div>
+<strong>Grasse</strong>
+<span>50 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,5)">
+<div class="badge">5</div>
+<div>
+<strong>Monaco</strong>
+<span>70 min</span>
+</div>
+</div>
+
+<div class="location" onclick="focusMarker(3,6)">
+<div class="badge">6</div>
+<div>
+<strong>Ventimiglia (Italia)</strong>
+<span>85 min</span>
+</div>
+</div>
+
+</div>
+
+<a class="button"
+target="_blank"
+href="https://maps.google.com/?q=French+Riviera">
+
+<i class="fa-solid fa-map-location-dot"></i>
+
+Esplora la regione
+
+</a>
+
+</section>
+
+<div class="mini-navigation">
+
+<a href="index.html" class="mini-nav">
+<i class="fa-solid fa-house"></i>
+<span>Home</span>
+</a>
+
+<a href="arrivee.html" class="mini-nav">
+<i class="fa-solid fa-key"></i>
+<span>Arrivo</span>
+</a>
+
+<a href="infos.html" class="mini-nav">
+<i class="fa-solid fa-circle-info"></i>
+<span>Informazioni utili</span>
+</a>
+
+<a href="proximite.html" class="mini-nav">
+<i class="fa-solid fa-location-dot"></i>
+<span>Nei dintorni</span>
+</a>
+
+<a href="depart.html" class="mini-nav">
+<i class="fa-solid fa-right-from-bracket"></i>
+<span>Partenza</span>
+</a>
+
+<a href="assistance.html" class="mini-nav">
+<i class="fa-regular fa-comment-dots"></i>
+<span>Assistenza</span>
+</a>
+
+</div>
+
+<footer>
+
+<h5>LES APPARTEMENTS DE LOUIS</h5>
+
+<p>Ti auguriamo un piacevole soggiorno a Saint-Raphaël.</p>
+
+</footer>
+
+</div>
+
+</main>
+
+<script>
+
+const maps=[];
+const markers=[[],[],[]];
+
+const appartement = [43.41307, 6.78370];
+
+const lieuxPied = [
+  { n: 1, nom: "Porto Santa Lucia", gps: [43.41230, 6.78270] },
+  { n: 2, nom: "Ristoranti", gps: [43.41317, 6.78051] },
+  { n: 3, nom: "Bar e caffè", gps: [43.41365, 6.78005] },
+  { n: 4, nom: "Minimarket", gps: [43.41450, 6.77928] },
+  { n: 5, nom: "Panetteria", gps: [43.41446, 6.77961] },
+  { n: 6, nom: "Spiaggia", gps: [43.40978, 6.78710] },
+  { n: 7, nom: "Farmacia", gps: [43.41635, 6.77661] },
+  { n: 8, nom: "Navette marittime per Saint-Tropez", gps: [43.42257, 6.76567] },
+  { n: 9, nom: "Stazione di Boulouris", gps: [43.41640, 6.80876] },
+  { n: 10, nom: "Stazione di Saint-Raphaël Valescure", gps: [43.42344, 6.76877] },
+  { n: 11, nom: "Casinò Barrière", gps: [43.42196, 6.76644] }
+];
+
+const lieuxVille = [
+  { n: 1, nom: "Base Nature François Léotard", gps: [43.41806, 6.74295] },
+  { n: 2, nom: "Luna Park", gps: [43.41966, 6.72809] },
+  { n: 3, nom: "Aqualand", gps: [43.41689, 6.72678] },
+  { n: 4, nom: "Massiccio dell'Estérel", gps: [43.50163, 6.79407] },
+  { n: 5, nom: "Ipermercato e stazione di servizio", gps: [43.43217, 6.80645] }
+];
+
+const lieuxRegion = [
+  { n: 1, nom: "Sainte-Maxime", gps: [43.30785, 6.64017] },
+  { n: 2, nom: "Saint-Tropez", gps: [43.26863, 6.63300] },
+  { n: 3, nom: "Cannes", gps: [43.55364, 7.02039] },
+  { n: 4, nom: "Grasse", gps: [43.65767, 6.92403] },
+  { n: 5, nom: "Monaco", gps: [43.73498, 7.41569] },
+  { n: 6, nom: "Ventimiglia", gps: [43.78928, 7.61189] }
+];
+
+maps[0] = L.map("map1", { zoomControl: false }).setView([43.4175, 6.7865], 14);
+maps[1] = L.map("map2", { zoomControl: false }).setView([43.4250, 6.7680], 11);
+maps[2] = L.map("map3", { zoomControl: false }).setView([43.5150, 6.9800], 8);
+
+maps.forEach(map => {
+
+L.tileLayer(
+"https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+{
+maxZoom:19,
+attribution:"© OpenStreetMap"
+}
+).addTo(map);
+
+});
+
+function homeIcon() {
+
+return L.divIcon({
+
+className: "",
+
+html: '<div class="home-marker">🏠</div>',
+
+iconSize: [50, 50],
+iconAnchor: [25, 25]
+
+});
+
+}
+
+function numberIcon(n) {
+
+return L.divIcon({
+
+className: "",
+
+html: `<div class="number-marker">${n}</div>`,
+
+iconSize: [30, 30],
+iconAnchor: [15, 15]
+
+});
+
+}
+
+function ajouterAppartement(index) {
+
+const marker = L.marker(
+
+appartement,
+
+{
+icon: homeIcon()
+}
+
+)
+
+.addTo(maps[index])
+
+.bindPopup(`
+
+<b>🏠 Les Appartements de Louis</b><br>
+
+55 Route de la Corniche<br><br>
+
+<a class="maps-button"
+
+target="_blank"
+
+href="https://maps.google.com/?q=55+Route+de+la+Corniche+83700+Saint-Raphaël">
+
+Indicazioni con Google Maps
+
+</a>
+
+`);
+
+markers[index][0] = marker;
+
+}
+
+function ajouterLieux(index, tableau) {
+
+tableau.forEach(lieu => {
+
+const marker = L.marker(
+
+lieu.gps,
+
+{
+icon: numberIcon(lieu.n)
+}
+
+)
+
+.addTo(maps[index])
+
+.bindPopup(`
+
+<b>${lieu.nom}</b><br><br>
+
+<a class="maps-button"
+
+target="_blank"
+
+href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lieu.nom+" Saint-Raphaël")}">
+
+Indicazioni con Google Maps
+
+</a>
+
+`);
+
+markers[index][lieu.n] = marker;
+
+});
+
+}
+
+ajouterAppartement(0);
+ajouterAppartement(1);
+ajouterAppartement(2);
+
+ajouterLieux(0, lieuxPied);
+ajouterLieux(1, lieuxVille);
+ajouterLieux(2, lieuxRegion);
+
+function focusMarker(carte, numero) {
+
+const map = maps[carte - 1];
+const marker = markers[carte - 1][numero];
+
+if (!marker) return;
+
+map.flyTo(
+marker.getLatLng(),
+map.getZoom(),
+{
+animate: true,
+duration: 0.8
+}
+);
+
+setTimeout(() => {
+
+marker.openPopup();
+
+}, 400);
+
+}
+
+maps.forEach(map=>{
+
+map.attributionControl.setPrefix("");
+
+map.on("load",()=>{
+
+map.invalidateSize();
+
+});
+
+});
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+maps.forEach(map=>{
+
+map.invalidateSize();
+
+});
+
+},300);
+
+setTimeout(()=>{
+
+maps.forEach(map=>{
+
+map.invalidateSize();
+
+});
+
+},1000);
+
+});
+
+maps.forEach(map=>{
+
+map.scrollWheelZoom.disable();
+
+});
+
+maps.forEach(map=>{
+
+map.doubleClickZoom.enable();
+
+});
+
+maps.forEach(map=>{
+
+map.touchZoom.enable();
+
+});
+
+maps.forEach(map=>{
+
+map.dragging.enable();
+
+});
+
+document.querySelectorAll(".map-section").forEach((section,index)=>{
+
+section.style.opacity="0";
+section.style.transform="translateY(20px)";
+
+setTimeout(()=>{
+
+section.style.transition="all .5s ease";
+section.style.opacity="1";
+section.style.transform="translateY(0)";
+
+},150*index);
+
+});
+
+</script>
+
+<script src="../langues.js"></script>
+
+</body>
+</html>
