@@ -1,0 +1,61 @@
+/* ===========================
+   LANGUES.CSS
+   =========================== */
+
+.language-selector{
+    position:absolute;
+    top:20px;
+    right:20px;
+    z-index:100;
+    text-align:right;
+    font-family:'Inter',sans-serif;
+    font-size:13px;
+    line-height:1.6;
+    color:#ffffff;
+    background:rgba(15,20,35,.25);
+    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);
+    padding:8px 12px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+
+.language-selector .globe{
+    color:#d9b36a;
+    margin-right:6px;
+    font-size:15px;
+}
+
+.language-selector a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:.4px;
+    transition:.2s;
+}
+
+.language-selector a:hover{
+    color:#d9b36a;
+}
+
+.language-selector a.active{
+    color:#d9b36a;
+}
+
+.language-selector span{
+    color:rgba(255,255,255,.45);
+    margin:0 2px;
+}
+
+@media (max-width:600px){
+
+.language-selector{
+    top:14px;
+    right:14px;
+    font-size:12px;
+    padding:6px 10px;
+    border-radius:12px;
+}
+
+}
