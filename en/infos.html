@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Practical Information | Jade Apartment</title>
 
-<link rel="stylesheet" href="../style.css">
-<link rel="stylesheet" href="../langues.css">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Practical Information | Jade Apartment</title>
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../langues.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body class="inner-page">
@@ -18,68 +22,125 @@
 <main>
 <section class="hero">
 
-<div class="language-selector">
-    🌐
-    <a href="../infos.html">FR</a> |
-    <a href="infos.html" class="active">EN</a><br>
-    <a href="../it/infos.html">IT</a> |
-    <a href="../es/infos.html">ES</a>
-</div>
+    <div class="language-selector">
+        🌐
+        <a href="../infos.html">FR</a> |
+        <a href="infos.html" class="active">EN</a><br>
+        <a href="../it/infos.html">IT</a> |
+        <a href="../es/infos.html">ES</a>
+    </div>
 
-<div class="logo">
-<h1><span class="white">L</span><span class="gold">A</span></h1>
-<p>LES APPARTEMENTS<br>DE LOUIS</p>
-</div>
+    <div class="logo">
+        <h1><span class="white">L</span><span class="gold">A</span></h1>
+        <p>LES APPARTEMENTS<br>DE LOUIS</p>
+    </div>
 
-<section class="welcome">
-<h2>Practical Information</h2>
-<h3>Jade Apartment</h3>
-<div class="line"></div>
-<p>Useful information for your stay.</p>
-</section>
+    <section class="welcome">
+        <h2>Practical Information</h2>
+        <h3>Jade Apartment</h3>
+        <div class="line"></div>
+        <p>Useful information for your stay.</p>
+    </section>
 
-<section class="info-card">
-<h3><i class="fa-solid fa-snowflake"></i> Air Conditioning</h3>
-<a href="../notice-clim.jpg" class="button">
-<i class="fa-solid fa-book-open"></i>
-<span>User Guide</span>
-</a>
-</section>
 
-<section class="info-card">
-<h3><i class="fa-solid fa-fire-burner"></i> Hob</h3>
-<a href="../notice-plaques.jpg" class="button">
-<i class="fa-solid fa-book-open"></i>
-<span>User Guide</span>
-</a>
-</section>
+    <!-- AIR CONDITIONING -->
 
-<section class="info-card">
-<h3><i class="fa-solid fa-umbrella-beach"></i> Terrace</h3>
-<p>Please close the parasol when it is windy.</p>
-</section>
+    <section class="info-card">
+        <h3>
+            <i class="fa-solid fa-snowflake"></i>
+            Air Conditioning
+        </h3>
 
-<section class="info-card">
-<h3><i class="fa-solid fa-circle-info"></i> House Rules</h3>
-<p>🚭 Non-smoking apartment.</p>
-<p>🎉 No parties allowed.</p>
-<p>🤫 Please respect the neighbours.</p>
-<p>🕙 Check-out before <strong>10:00 a.m.</strong></p>
-</section>
+        <img
+            src="climatisation-en.jpg"
+            alt="Air conditioning user guide"
+            class="info-photo">
+    </section>
 
-<section class="mini-navigation">
-<a href="index.html" class="mini-nav"><i class="fa-solid fa-house"></i><span>Home</span></a>
-<a href="arrivee.html" class="mini-nav"><i class="fa-solid fa-key"></i><span>Check-in</span></a>
-<a href="wifi.html" class="mini-nav"><i class="fa-solid fa-wifi"></i><span>Wi-Fi</span></a>
-<a href="proximite.html" class="mini-nav"><i class="fa-solid fa-location-dot"></i><span>Nearby</span></a>
-<a href="depart.html" class="mini-nav"><i class="fa-solid fa-right-from-bracket"></i><span>Check-out</span></a>
-<a href="assistance.html" class="mini-nav"><i class="fa-regular fa-comment-dots"></i><span>Help</span></a>
-</section>
 
-<footer>
-<h5>LES APPARTEMENTS DE LOUIS</h5>
-<p>We wish you a wonderful stay.</p>
-</footer>
+    <!-- HOB -->
+
+    <section class="info-card">
+        <h3>
+            <i class="fa-solid fa-fire-burner"></i>
+            Hob
+        </h3>
+
+        <img
+            src="plaques-en.jpg"
+            alt="Hob user guide"
+            class="info-photo">
+    </section>
+
+
+    <!-- TERRACE -->
+
+    <section class="info-card">
+        <h3>
+            <i class="fa-solid fa-umbrella-beach"></i>
+            Terrace
+        </h3>
+
+        <p>Please close the parasol when it is windy.</p>
+    </section>
+
+
+    <!-- HOUSE RULES -->
+
+    <section class="info-card">
+        <h3>
+            <i class="fa-solid fa-circle-info"></i>
+            House Rules
+        </h3>
+
+        <p>🚭 Non-smoking apartment.</p>
+        <p>🎉 No parties allowed.</p>
+        <p>🤫 Please respect the neighbours.</p>
+        <p>🕙 Check-out before <strong>10:00 a.m.</strong></p>
+    </section>
+
+
+    <!-- MINI NAVIGATION -->
+
+    <section class="mini-navigation">
+
+        <a href="index.html" class="mini-nav">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+
+        <a href="arrivee.html" class="mini-nav">
+            <i class="fa-solid fa-key"></i>
+            <span>Check-in</span>
+        </a>
+
+        <a href="wifi.html" class="mini-nav">
+            <i class="fa-solid fa-wifi"></i>
+            <span>Wi-Fi</span>
+        </a>
+
+        <a href="proximite.html" class="mini-nav">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Nearby</span>
+        </a>
+
+        <a href="depart.html" class="mini-nav">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Check-out</span>
+        </a>
+
+        <a href="assistance.html" class="mini-nav">
+            <i class="fa-regular fa-comment-dots"></i>
+            <span>Help</span>
+        </a>
+
+    </section>
+
+
+    <footer>
+        <h5>LES APPARTEMENTS DE LOUIS</h5>
+        <p>We wish you a wonderful stay.</p>
+    </footer>
 
 </section>
 </main>
