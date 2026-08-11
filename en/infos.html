@@ -2,17 +2,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Practical Information | Jade Apartment</title>
+<title>Practical Information | Jade Apartment</title>
 
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../langues.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../langues.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+<style>
+.info-photo{
+    display:block;
+    width:100%;
+    max-width:520px;
+    height:auto;
+    margin:12px auto 0;
+    border-radius:14px;
+    box-shadow:0 8px 24px rgba(0,0,0,.18);
+}
+</style>
+
 </head>
 
 <body class="inner-page">
@@ -20,130 +33,167 @@
 <div class="overlay"></div>
 
 <main>
+
 <section class="hero">
 
-    <div class="language-selector">
-        🌐
-        <a href="../infos.html">FR</a> |
-        <a href="infos.html" class="active">EN</a><br>
-        <a href="../it/infos.html">IT</a> |
-        <a href="../es/infos.html">ES</a>
-    </div>
-
-    <div class="logo">
-        <h1><span class="white">L</span><span class="gold">A</span></h1>
-        <p>LES APPARTEMENTS<br>DE LOUIS</p>
-    </div>
-
-    <section class="welcome">
-        <h2>Practical Information</h2>
-        <h3>Jade Apartment</h3>
-        <div class="line"></div>
-        <p>Useful information for your stay.</p>
-    </section>
+<!-- LANGUES -->
+<div class="language-selector">
+    🌐
+    <a href="../infos.html">FR</a> |
+    <a href="infos.html" class="active">EN</a><br>
+    <a href="../it/infos.html">IT</a> |
+    <a href="../es/infos.html">ES</a>
+</div>
 
 
-    <!-- AIR CONDITIONING -->
+<!-- LOGO -->
+<div class="logo">
+    <h1>
+        <span class="white">L</span><span class="gold">A</span>
+    </h1>
 
-    <section class="info-card">
-        <h3>
-            <i class="fa-solid fa-snowflake"></i>
-            Air Conditioning
-        </h3>
-
-        <img
-            src="climatisation-en.jpg"
-            alt="Air conditioning user guide"
-            class="info-photo">
-    </section>
+    <p>
+        LES APPARTEMENTS<br>
+        DE LOUIS
+    </p>
+</div>
 
 
-    <!-- HOB -->
+<!-- INTRODUCTION -->
+<section class="welcome">
 
-    <section class="info-card">
-        <h3>
-            <i class="fa-solid fa-fire-burner"></i>
-            Hob
-        </h3>
+    <h2>Practical Information</h2>
 
-        <img
-            src="plaques-en.jpg"
-            alt="Hob user guide"
-            class="info-photo">
-    </section>
+    <h3>Jade Apartment</h3>
 
+    <div class="line"></div>
 
-    <!-- TERRACE -->
-
-    <section class="info-card">
-        <h3>
-            <i class="fa-solid fa-umbrella-beach"></i>
-            Terrace
-        </h3>
-
-        <p>Please close the parasol when it is windy.</p>
-    </section>
-
-
-    <!-- HOUSE RULES -->
-
-    <section class="info-card">
-        <h3>
-            <i class="fa-solid fa-circle-info"></i>
-            House Rules
-        </h3>
-
-        <p>🚭 Non-smoking apartment.</p>
-        <p>🎉 No parties allowed.</p>
-        <p>🤫 Please respect the neighbours.</p>
-        <p>🕙 Check-out before <strong>10:00 a.m.</strong></p>
-    </section>
-
-
-    <!-- MINI NAVIGATION -->
-
-    <section class="mini-navigation">
-
-        <a href="index.html" class="mini-nav">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
-        </a>
-
-        <a href="arrivee.html" class="mini-nav">
-            <i class="fa-solid fa-key"></i>
-            <span>Check-in</span>
-        </a>
-
-        <a href="wifi.html" class="mini-nav">
-            <i class="fa-solid fa-wifi"></i>
-            <span>Wi-Fi</span>
-        </a>
-
-        <a href="proximite.html" class="mini-nav">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Nearby</span>
-        </a>
-
-        <a href="depart.html" class="mini-nav">
-            <i class="fa-solid fa-right-from-bracket"></i>
-            <span>Check-out</span>
-        </a>
-
-        <a href="assistance.html" class="mini-nav">
-            <i class="fa-regular fa-comment-dots"></i>
-            <span>Help</span>
-        </a>
-
-    </section>
-
-
-    <footer>
-        <h5>LES APPARTEMENTS DE LOUIS</h5>
-        <p>We wish you a wonderful stay.</p>
-    </footer>
+    <p>
+        Useful information for your stay.
+    </p>
 
 </section>
+
+
+<!-- AIR CONDITIONING -->
+<section class="info-card">
+
+    <h3>
+        <i class="fa-solid fa-snowflake"></i>
+        Air Conditioning
+    </h3>
+
+    <img
+        src="../climatisation-en.jpg.jfif"
+        alt="Air conditioning user guide"
+        class="info-photo">
+
+</section>
+
+
+<!-- HOB -->
+<section class="info-card">
+
+    <h3>
+        <i class="fa-solid fa-fire-burner"></i>
+        Hob
+    </h3>
+
+    <img
+        src="../plaques-cuisson-en.jpg.jfif"
+        alt="Hob user guide"
+        class="info-photo">
+
+</section>
+
+
+<!-- TERRACE -->
+<section class="info-card">
+
+    <h3>
+        <i class="fa-solid fa-umbrella-beach"></i>
+        Terrace
+    </h3>
+
+    <p>
+        Please close the parasol when it is windy.
+    </p>
+
+</section>
+
+
+<!-- HOUSE RULES -->
+<section class="info-card">
+
+    <h3>
+        <i class="fa-solid fa-circle-info"></i>
+        House Rules
+    </h3>
+
+    <p>🚭 Non-smoking apartment.</p>
+
+    <p>🎉 No parties allowed.</p>
+
+    <p>🤫 Please respect the neighbours.</p>
+
+    <p>🕙 Check-out before <strong>10:00 a.m.</strong></p>
+
+</section>
+
+
+<!-- NAVIGATION -->
+<section class="mini-navigation">
+
+    <a href="index.html" class="mini-nav">
+        <i class="fa-solid fa-house"></i>
+        <span>Home</span>
+    </a>
+
+    <a href="arrivee.html" class="mini-nav">
+        <i class="fa-solid fa-key"></i>
+        <span>Check-in</span>
+    </a>
+
+    <a href="wifi.html" class="mini-nav">
+        <i class="fa-solid fa-wifi"></i>
+        <span>Wi-Fi</span>
+    </a>
+
+    <a href="proximite.html" class="mini-nav">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>Nearby</span>
+    </a>
+
+    <a href="depart.html" class="mini-nav">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Check-out</span>
+    </a>
+
+    <a href="assistance.html" class="mini-nav">
+        <i class="fa-regular fa-comment-dots"></i>
+        <span>Help</span>
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <h5>
+        LES APPARTEMENTS DE LOUIS
+    </h5>
+
+    <p>
+        We wish you a wonderful stay.
+    </p>
+
+</footer>
+
+</section>
+
 </main>
+
 
 <script src="../langues.js"></script>
 
